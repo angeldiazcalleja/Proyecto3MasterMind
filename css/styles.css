@@ -59,22 +59,21 @@ body {
 }
 
 .containerText {
-  width: 50%;
-  height: 50%;
+  width: 80%;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 2em;
 }
 .caja {
-  font-family: sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  color: black;
+  font-family: oblique;
+  font-size: 20px;
   background: #0bf4e49a;
   margin: 0 0 25px;
   overflow: hidden;
   padding: 20px;
   border-radius: 8px;
+  text-align: justify;
 }
 
 .borderContainer {
@@ -138,4 +137,24 @@ body {
       0 0 50px #00fff2, 0 0 60px #00fff2, 0 0 70px #00fff2, 0 0 80px #00fff2,
       0 1 90px #00fff2;
   }
+}
+
+#name {
+    border: 2px dashed indianred;
+    background-color: #01fcd8;
+    border-radius: 5px;
+    height: 2em;
+    width: 12em;
+  }
+
+.containerName{
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+#labelName{
+  margin-right: 3em;
+  font-family: oblique;
+  font-weight: bold;
+  font-size: 18px;
 }
