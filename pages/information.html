@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/styles.css">
-    <title></title>
+    <title>🔴🟠🟡Information🟢🔵🟣</title>
 </head>
 <body>
     
@@ -12,18 +12,36 @@
         <div class="borderContainer">
             <!-- REGISTRO -->
          <div class="borderContainer2">
+            <div class="borderContainer3">
          <div class="containerName">
-            <label id="labelName" for="name">Introduce tu nombre: </label>
-            <input type="text" id="name" name="name" required minlength="4" maxlength="8" size="10" placeholder="Escribe aquí tu nombre"/>
-          
+            <label id="labelName" for="name">Introduce tu nombre </label>
+            <input type="text" id="nameInput" name="name" required minlength="4" maxlength="8" size="10" placeholder="Escribe aquí tu nombre"/>
+         </div>
+            </div>
+            <h2 id="h2Colors">🔴🟠🟡Elige 4 colores🔵🟢🟣</h2>
+            <div class="row justify-content-center">
+                <div class="col-4 columnColor">
+                 <input id="color_picker" type="color" value="#F4D03F" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value"></span>
+                </div>
+                <div class="col-4 columnColor">
+                 <input id="color_picker" type="color" value="#58D68D" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value"></span>
+                </div>
+                <div class="col-4 columnColor">
+                 <input id="color_picker" type="color" value="#C0392B" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value"></span>
+                </div>
+                <div class="col-4 columnColor">
+                 <input id="color_picker" type="color" value="#3498DB" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value"></span>
+                </div>
+              </div>
+           </div>
+
          <div class="containerButtons">
             <div class="row">
               <div class="col buttonBack">
-                <a class="buttonPlay" href="" style="text-decoration: none"></a>
+                <a class="buttonPlay" href="" style="text-decoration: none">LET'S PLAY</a>
               </div>
             </div>
            </div>
-        </div>
     </div>
 
 

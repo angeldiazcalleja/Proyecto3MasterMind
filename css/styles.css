@@ -36,8 +36,8 @@ body {
 
 .button1,
 .button2 {
-  background-color: #01fcd68a;
-  border: 2px solid #b2f704;
+  background-color: #01fcd6ab;
+  border: 4px solid #b2f704;
   border-radius: 8px;
   margin: 1em;
   padding: 18px 36px;
@@ -50,6 +50,7 @@ body {
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
+  color: rgb(243, 0, 207);
 }
 
 .button1:hover,
@@ -97,12 +98,23 @@ body {
   background-color: #01fcd656;
   margin-top: 1.5em;
 }
+.borderContainer3 {
+  border: 0.3em groove #f704eb;
+  border-radius: 1em;
+  width: 22em;
+  height: 10em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #01fcd656;
+  margin-top: 1.5em;
+}
 
 .buttonBack {
   background-color: #fc01b5;
   border: 2px solid #f704d3;
   border-radius: 8px;
   padding: 5px 60px;
+  margin-top: 2em;
   display: inline-block;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 18px;
@@ -121,7 +133,7 @@ body {
   -webkit-animation: glow 2s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
   animation: glow 2s ease-in-out infinite alternate;
-  font-family: 'Codystar';
+  font-family: "Codystar";
 }
 
 @-webkit-keyframes glow {
@@ -139,22 +151,56 @@ body {
   }
 }
 
-#name {
-    border: 2px dashed indianred;
-    background-color: #01fcd8;
-    border-radius: 5px;
-    height: 2em;
-    width: 12em;
-  }
-
-.containerName{
-    margin-top: 2em;
-    margin-left: 2em;
+#nameInput {
+  border: 2px dashed #b2f704;
+  background-color: #01fcd8;
+  border-radius: 5px;
+  height: 2em;
+  width: 60%;
+  margin-left: 5em;
+  margin-top: 2em;
 }
 
-#labelName{
-  margin-right: 3em;
-  font-family: oblique;
+::placeholder {
+    color:rgb(247, 8, 163);
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+.containerName {
+  width: 100%;
+  height: 100%;
+  padding-top: 3em;
+}
+
+#labelName {
+  font-family: "Codystar";
+  color: #13f707;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
+  margin-left: 14%;
+  margin-right: 14%;
+}
+
+
+.columnColor {
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 4.5em;
+}
+
+#color_picker {
+  width: 5em;
+  height: 3em;
+  border-radius: 16px;
+}
+
+#h2Colors {
+  margin-left: 4.8em;
+  font-family: "Codystar";
+  color: #b2f704;
+  font-weight: bold;
 }
