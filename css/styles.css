@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Codystar:300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
 
 html,
 body {
@@ -109,7 +110,8 @@ body {
   margin-top: 1.5em;
 }
 
-.containerVictory {
+.containerVictory,
+.containerFail {
   border: 0.3em groove #dbf704;
   border-radius: 1em;
   width: 65em;
@@ -125,7 +127,6 @@ body {
   border: 3px solid #b604f7;
   border-radius: 8px;
   padding: 5px 60px;
-  margin-top: 2em;
   display: inline-block;
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 18px;
@@ -137,12 +138,13 @@ body {
   transition: ease-out 0.4s;
 }
 
-.h1Title{
-    font-size: 35px;
-    text-align: center;
-    font-weight: bold;
+.h1Title {
+  font-size: 35px;
+  text-align: center;
+  font-weight: bold;
 }
-#neons, #labelName {
+#neons,
+#labelName {
   -webkit-animation: glow 2s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
   animation: glow 2s ease-in-out infinite alternate;
@@ -219,12 +221,13 @@ body {
 }
 
 .buttonVictory {
-  padding-top: 2em;
+  padding-top: 1.5em;
   display: inline-block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: normal 48px / normal "Warnes", Helvetica, sans-serif;
+  font-family: 'DotGothic16', sans-serif;
+  font-size: 56px;
   color: rgba(255, 255, 255, 1);
   text-decoration: normal;
   text-align: center;
@@ -246,8 +249,47 @@ body {
     0 0 80px #00ffff, 0 0 100px #00ffff;
 }
 
-.titleVictory {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.titleVictory{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
+
+#gameOverId {
+  box-sizing: border-box;
+  font-family: 'Pixelify Sans', sans-serif;
+  color: rgba(201, 15, 211, 0.89);
+  font-size: 11vw;
+  position: relative;
+  margin-left: 0.4em;
+  margin-top: 0.15em;
+  text-transform: uppercase;
+  -webkit-text-stroke: 0.3vw rgb(201, 15, 211);;
+}
+
+#gameOverId::before {
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  color: #cfff04;
+  overflow: hidden;
+  position: absolute;
+  content: attr(data-text);
+  border-right: 2px solid #c19bf5;
+  -webkit-text-stroke: 0vw #f7f7fe;
+  animation: animate 6s linear infinite;
+} 
+
+@keyframes animate {
+  0%,
+  10%,
+  100% {
+    width: 0;
+  }
+
+  70%,
+  90% {
+    width: 100%;
+  }
+} 
