@@ -17,6 +17,8 @@ body {
   background-size: 100%;
   padding-top: 3em;
 }
+
+
 .container1 {
   width: 32em;
   height: 32em;
@@ -136,6 +138,10 @@ body {
   -webkit-transition: ease-out 0.4s;
   -moz-transition: ease-out 0.4s;
   transition: ease-out 0.4s;
+}
+
+.buttonBackCenter{
+    margin-top: 2em;
 }
 
 .h1Title {
@@ -293,3 +299,30 @@ body {
     width: 100%;
   }
 } 
+
+.fila {
+  display: flex;
+  top: 50%;
+  left: 50%;
+  margin-left: 2em;
+ 
+}
+.elemento {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  margin: 5px;
+}
+
+.borderContainerGame{
+  border: 0.3em groove #f704d3;
+  border-radius: 1em;
+  width: 18em;
+  height: 35em;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #01fcd656;
+  margin-top: 1.2em;
+}
+
+ 
