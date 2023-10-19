@@ -17,9 +17,13 @@
       <div class="containerButtons">
         <div class="row">
           <div class="col button1">
-            <a class="buttonRules" href="" style="text-decoration: none">
-              MAIN 🎮</a
-            >
+            <a
+          class="buttonRules"
+          id="buttonFailMain"
+          onclick="hacerClicEnBoton('buttonFailMain','../index.html')"
+          style="text-decoration: none"
+          >MAIN 🎮</a
+        >
           </div>
         </div>
       </div>
@@ -31,13 +35,21 @@
       </div>
       <div class="containerButtons">
         <div class="col button2">
-          <a class="buttonPlay" href="" style="text-decoration: none">
-            PLAY AGAIN? 🎮</a
-          >
+  
+          <a
+          class="buttonPlay"
+          id="buttonFailPlayAgain"
+          onclick="hacerClicEnBoton('buttonFailPlayAgain','playGame.html')"
+          style="text-decoration: none"
+          >PLAY AGAIN? 🎮</a
+        >
         </div>
       </div>
     </div>
 
     <script src="/js/main.js"></script>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/information.js"></script>
+
   </body>
 </html>

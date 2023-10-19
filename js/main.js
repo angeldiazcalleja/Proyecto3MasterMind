@@ -1,10 +1,3 @@
-// const boton = document.getElementById("button2");
-// boton.addEventListener("click", function () {
-//     // Ocultar la primera página y mostrar la segunda
-//     let nuevaPagina = "pages/rules.html"
-//     window.location.href = "pages/rules.html";
-//   });
-
 const generarFilasDeDivs = () => {
   const contenedor = document.getElementById("contenedorGame");
   for (let i = 0; i < 10; i++) {
@@ -34,3 +27,7 @@ const generarDivColores = () => {
   }
 };
 generarDivColores();
+
+
+
+

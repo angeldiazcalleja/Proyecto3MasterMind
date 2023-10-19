@@ -8,19 +8,33 @@
   </head>
   <body>
     <div class="container-fluid">
-      <div class="container1">
-      </div>
+      <div class="container1"></div>
       <div class="containerButtons">
         <div class="row">
           <div class="col button1">
-            <a class="buttonPlay" href="" style="text-decoration: none">PLAY 🎮</a>
+            <a
+              class="buttonPlay"
+              id="buttonPlay"
+              onclick="hacerClicEnBoton('buttonPlay','pages/information.html')"
+              style="text-decoration: none"
+              >PLAY 🎮</a
+            >
+            <!-- <button id="buttonPlay" style="text-decoration: none">PLAY 🎮</button> -->
           </div>
           <div class="col button2">
-            <a class="buttonRules" href="" style="text-decoration: none">RULES 🎮</a>
+            <a
+              class="buttonRules"
+              id="buttonRules"
+              onclick="hacerClicEnBoton('buttonRules','pages/rules.html')"
+              style="text-decoration: none"
+              >RULES 🎮</a
+            >
           </div>
         </div>
       </div>
     </div>
     <script src="js/main.js"></script>
+    <script src="js/buttons.js"></script>
+    <script src="js/information.js"></script>
   </body>
 </html>
