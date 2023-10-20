@@ -1,29 +1,22 @@
+//LLEVAR NOMBRE 
+document.addEventListener("DOMContentLoaded", function() {
+    const nameInput = document.getElementById("nameInput");
+    const guardarNombreBtn = document.getElementById("guardarNombre");
 
-//   //para guardar información "j1" seria el nombre de la variable donde guardaremos la información y jugador.value es el valor que queremos guardar
-// sessionStorage.setItem("j1", jugador.value);
-// //para obtener la información usamos lo siguiente
-// let nombreJugador = sessionStorage.getItem("j1");
-// "j1" es la variable donde guardamos la información anterior
+    // Al hacer clic en el botón "Guardar Nombre", redirigir a playGame.html con el nombre como parámetro de consulta
+    guardarNombreBtn.addEventListener("click", function() {
+        const nombre = nameInput.value;
+        const url = `playGame.html?nombre=${encodeURIComponent(nombre)}`;
+        window.location.href = url;
+    });
+});
 
-
-document.getElementById("buttonPlayGame").addEventListener("click", function () {
-    // Obtener el valor del input
-    let nombre = document.getElementById("nameInput").value;
-
-    // Almacenar el valor en sessionStorage
-    sessionStorage.setItem("nombre", nombre.value);
-
-    // Muestra el valor en la página
-    document.getElementById("nombreMostrado").textContent = nombre;
-  });
-
-  // Recuperar el valor almacenado en sessionStorage y mostrarlo
-  let nombreAlmacenado = sessionStorage.getItem("nombre");
-  if (nombreAlmacenado) {
-    document.getElementById("nombreMostrado").textContent = nombreAlmacenado;
-  }
-
-
-
-
-
+  // Recuperar el nombre de la URL y mostrarlo
+  document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const nombre = params.get("nombre");
+    
+    if (nombre) {
+        document.getElementById("nombreMostrado").textContent = decodeURIComponent(nombre);
+    }
+});
