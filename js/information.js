@@ -20,3 +20,38 @@ document.addEventListener("DOMContentLoaded", function() {
         document.getElementById("nombreMostrado").textContent = decodeURIComponent(nombre);
     }
 });
+
+
+
+// //LLEVAR COLORES
+    document.addEventListener("DOMContentLoaded", function() {
+    const selectedColors = [];
+  
+    const showHex=()=> {
+      const colorPickers = document.querySelectorAll(".color_picker");
+      selectedColors.length = 0; 
+      colorPickers.forEach(picker => {
+        selectedColors.push(picker.value);
+      });
+  
+      // Muestra los colores en colorDiv
+      const colorDiv = document.querySelector(".elementoColor");º
+      colorDiv.innerHTML = ''; // Limpia el contenido actual
+  
+      if (selectedColors.length >= 4) { 
+        selectedColors.forEach(colorHex => {
+          const colorBox = document.createElement('div');
+          colorBox.style.backgroundColor = colorHex;
+          colorDiv.appendChild(colorBox);
+        });
+      } 
+    }
+    const guardarNombreButton = document.getElementById("guardarNombre");
+    if (guardarNombreButton) {
+      guardarNombreButton.addEventListener("click", showHex);
+    }
+  });
+  
+
+
+   
