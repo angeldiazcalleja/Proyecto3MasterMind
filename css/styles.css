@@ -236,7 +236,7 @@ body {
   padding-left: 4.5em;
 }
 
-#color_picker {
+#color_picker_1, #color_picker_2,#color_picker_3,#color_picker_4 {
   width: 5em;
   height: 3em;
   border-radius: 16px;

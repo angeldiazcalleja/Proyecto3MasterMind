@@ -1,57 +1,45 @@
-//LLEVAR NOMBRE 
-document.addEventListener("DOMContentLoaded", function() {
-    const nameInput = document.getElementById("nameInput");
-    const guardarNombreBtn = document.getElementById("guardarNombre");
-
-    // Al hacer clic en el botón "Guardar Nombre", redirigir a playGame.html con el nombre como parámetro de consulta
-    guardarNombreBtn.addEventListener("click", function() {
-        const nombre = nameInput.value;
-        const url = `playGame.html?nombre=${encodeURIComponent(nombre)}`;
-        window.location.href = url;
-    });
-});
-
-  // Recuperar el nombre de la URL y mostrarlo
-  document.addEventListener("DOMContentLoaded", function() {
-    const params = new URLSearchParams(window.location.search);
-    const nombre = params.get("nombre");
-    
-    if (nombre) {
-        document.getElementById("nombreMostrado").textContent = decodeURIComponent(nombre);
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
+  const saveNameBtn = document.getElementById("guardarNombre");
+  let nameInput;
+  let saveColorButton1;
+  let saveColorButton2;
+  let saveColorButton3;
+  let saveColorButton4;
 
 
 
-// //LLEVAR COLORES
-    document.addEventListener("DOMContentLoaded", function() {
-    const selectedColors = [];
-  
-    const showHex=()=> {
-      const colorPickers = document.querySelectorAll(".color_picker");
-      selectedColors.length = 0; 
-      colorPickers.forEach(picker => {
-        selectedColors.push(picker.value);
-      });
-  
-      // Muestra los colores en colorDiv
-      const colorDiv = document.querySelector(".elementoColor");º
-      colorDiv.innerHTML = ''; // Limpia el contenido actual
-  
-      if (selectedColors.length >= 4) { 
-        selectedColors.forEach(colorHex => {
-          const colorBox = document.createElement('div');
-          colorBox.style.backgroundColor = colorHex;
-          colorDiv.appendChild(colorBox);
-        });
-      } 
-    }
-    const guardarNombreButton = document.getElementById("guardarNombre");
-    if (guardarNombreButton) {
-      guardarNombreButton.addEventListener("click", showHex);
-    }
+  // Al hacer clic en el botón "Guardar Nombre", redirigir a playGame.html con el nombre como parámetro de consulta
+  saveNameBtn.addEventListener("click", function () {
+    nameInput = document.getElementById("nameInput").value;
+    localStorage.setItem("Name", nameInput);
+    saveColorButton1 = document.getElementById("color_picker_1").value;
+    localStorage.setItem("color1", saveColorButton1);
+    saveColorButton2 = document.getElementById("color_picker_2").value;
+    localStorage.setItem("color2", saveColorButton2);
+    saveColorButton3 = document.getElementById("color_picker_3").value;
+    localStorage.setItem("color3", saveColorButton3);
+    saveColorButton4 = document.getElementById("color_picker_4").value;
+    localStorage.setItem("color4", saveColorButton4);
+    const url = `playGame.html?nombre=${encodeURIComponent("nameInput")}`;
+    window.location.href = url;
   });
-  
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  let name = localStorage.getItem("Name");
+  document.getElementById("nombreMostrado").innerHTML = name;
+  let colorPlayGame = localStorage.getItem("color1");
+  document.getElementById("color_0").style.backgroundColor = colorPlayGame;
+  let colorPlayGame1 = localStorage.getItem("color2");
+  document.getElementById("color_1").style.backgroundColor = colorPlayGame1;
+  let colorPlayGame2 = localStorage.getItem("color3");
+  document.getElementById("color_2").style.backgroundColor = colorPlayGame2;
+  let colorPlayGame3 = localStorage.getItem("color4");
+  document.getElementById("color_3").style.backgroundColor = colorPlayGame3;
+});
 
 
-   
+let arrayColor= []
+ .push
+
+mathrandom

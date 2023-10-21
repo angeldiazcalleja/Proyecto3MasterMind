@@ -20,13 +20,20 @@ const generarDivColores = () => {
     fila.classList.add("filaColor");
     for (let j = 0; j < 4; j++) {
       const div = document.createElement("div");
-      div.classList.add("elementoColor");
+      div.classList.add("elementoColor"); 
+      div.id = `color_${j}`
       fila.appendChild(div);
     }
     contenedorColor.appendChild(fila);
   }
 };
 generarDivColores();
+
+
+
+
+
+
 
 
 
