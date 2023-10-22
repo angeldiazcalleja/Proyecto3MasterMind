@@ -18,16 +18,16 @@ body {
   padding-top: 3em;
 }
 
-
-.container1 {
+ 
+ .container1 {
   width: 32em;
   height: 32em;
-  background-image: url("/images/masters.png");
+  /* background-image: url("/images/masters.png"); */
   background-size: 100%;
   border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
-}
+} 
 
 .containerButtons {
   display: flex;

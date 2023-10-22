@@ -1,0 +1,62 @@
+@media only screen and (max-width: 1200px) {
+.container-fluid,.container-fluidGame{
+background-image: url(/images/fondoResponsive.avif);
+background-repeat: repeat;
+}
+
+.borderContainer{
+    width: 22em ;
+    height: 45em ;
+}
+.borderContainer2{
+    width:18em;
+    height: 35em ;
+}
+.container1{
+    width: 22em;
+}
+.borderContainerGame{
+    margin-top: 7em;
+}
+.containerResponsive{
+    margin-left: 7em;
+}
+.containerText{
+    width: 16em ;
+    height: 30em ;
+}
+.borderContainer3{
+   width: 15em;
+}
+#nameInput{
+ margin-left: 3.4em ;
+}
+#labelName{
+    margin-left: 2em;
+    font-size: 15px;
+}
+#h2Colors{
+    font-size: 15px ;
+    margin-left: 1em ;
+}
+.columnColor{
+    display:block;
+    margin-left: 2.8em;
+    margin-top: 2em;
+}
+.containerVictor, .containerFail{
+    width: 22em;
+}
+.buttonVictory{
+   font-size: 20px;
+   padding-top: 5em;
+}
+#gameOverId{
+    margin-top: 2.2em;
+    margin-left: 1em;
+ 
+}
+.containerButtonsResponsive{
+    margin-top: 10em;
+}
+}

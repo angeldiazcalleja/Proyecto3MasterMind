@@ -1,4 +1,4 @@
-const selectedColors = []; // Colores seleccionados
+let selectedColors = []; // Colores seleccionados
 
 document.addEventListener("DOMContentLoaded", function () {
   const saveNameBtn = document.getElementById("guardarNombre");
@@ -29,9 +29,9 @@ document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("nombreMostrado").innerHTML = name;
 
   // Recuperar el array de colores del almacenamiento local
-  let selectedColors = JSON.parse(localStorage.getItem("SelectedColors"));
+  selectedColors = JSON.parse(localStorage.getItem("SelectedColors"));
   let originalColors = [...selectedColors];
-  console.log(originalColors)
+  console.log(originalColors);
 
   // Generar mi array con diferentes posiciones en los colores
   selectedColors = riffleArray(selectedColors);
@@ -39,17 +39,14 @@ document.addEventListener("DOMContentLoaded", function () {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]]; // Intercambiar elementos
-    } console.log(array, "DUDA")
-    console.log(selectedColors, "DUDA2")
+    }
     return array;
   }
-
   // Asignar los colores aleatorios
   document.getElementById("color_0").style.backgroundColor = selectedColors[0];
   document.getElementById("color_1").style.backgroundColor = selectedColors[1];
   document.getElementById("color_2").style.backgroundColor = selectedColors[2];
   document.getElementById("color_3").style.backgroundColor = selectedColors[3];
-  console.log(selectedColors)
-})
-
-
+  console.log(selectedColors);
+  return selectedColors;
+});
