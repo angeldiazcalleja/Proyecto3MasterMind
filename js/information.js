@@ -1,4 +1,4 @@
-const selectedColors = []; // Aquí almacenaremos los colores seleccionados
+const selectedColors = []; // Colores seleccionados
 
 document.addEventListener("DOMContentLoaded", function () {
   const saveNameBtn = document.getElementById("guardarNombre");
@@ -30,22 +30,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Recuperar el array de colores del almacenamiento local
   let selectedColors = JSON.parse(localStorage.getItem("SelectedColors"));
+  let originalColors = [...selectedColors];
+  console.log(originalColors)
 
-  // Aleatorizar el orden de los colores en el array
-  // if (selectedColors && selectedColors.length >= 4) {
-
-    document.getElementById("color_0").style.backgroundColor = selectedColors[0];
-    document.getElementById("color_1").style.backgroundColor = selectedColors[1];
-    document.getElementById("color_2").style.backgroundColor = selectedColors[2];
-    document.getElementById("color_3").style.backgroundColor = selectedColors[3];
-  
   // Generar mi array con diferentes posiciones en los colores
   selectedColors = riffleArray(selectedColors);
-  function riffleArray (array) {
+  function riffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]]; // Intercambiar elementos
-    } console.log(array)
+    } console.log(array, "DUDA")
+    console.log(selectedColors, "DUDA2")
     return array;
   }
-});
+
+  // Asignar los colores aleatorios
+  document.getElementById("color_0").style.backgroundColor = selectedColors[0];
+  document.getElementById("color_1").style.backgroundColor = selectedColors[1];
+  document.getElementById("color_2").style.backgroundColor = selectedColors[2];
+  document.getElementById("color_3").style.backgroundColor = selectedColors[3];
+  console.log(selectedColors)
+})
+
+

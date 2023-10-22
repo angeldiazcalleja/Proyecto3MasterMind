@@ -6,7 +6,3 @@ const hacerClicEnBoton = (idDelBoton, direccionDePagina) =>{
 
     } 
 
-
-
-
-   
