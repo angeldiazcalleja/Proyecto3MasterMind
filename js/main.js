@@ -75,12 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
     button.addEventListener("click", borrarUltimoElementoPintado);
   });
 });
-//Aquí se almacena los valores de las 10 filas con sus respectivos colores
 
-let selectColors = [];
+  
+let arraysFilaHex = []   // Array para almacenar los arrays de valores de color en hexadecimal
 
 document.addEventListener("DOMContentLoaded", function () {
-  const arraysFilaHex = []; // Array para almacenar los arrays de valores de color en hexadecimal
 
   // Escuchar el clic en el botón con la clase "check"
   const checkButton = document.querySelector(".check");
@@ -109,43 +108,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const filaHex = elementos.map((rgb) => rgbToHex(rgb));
       arraysFilaHex.push(filaHex);
     }
-    // Comparar cada posición de los arrays
-    for (let i = 0; i < 4; i++) {
-      if (arraysFilaHex[0][i] === selectedColor[i]) {
-        console.log("Posición " + i + " igual");
-      } else {
-        console.log("Posición " + i + " distinta");
-      }
-    }
     console.log(arraysFilaHex, "Arrays hexadecimales de las 10 filas");
-  });
-});
-
-//Comprobación colores
-
-const compararYActualizarEstilos = (selectedColors, arraysFilaHex) => {
-  const filas = document.querySelectorAll(".fila");
-
-  for (let i = 0; i < selectedColors.length; i++) {
-    // Obtiene el color en formato hexadecimal desde el arrayFilaHex
-    const colorHex = arraysFilaHex[0][i];
-    const colorSeleccionado = selectedColors[i];
-
-    if (colorHex === colorSeleccionado) {
-      // Si los colores coinciden, cambia el borde del div en verde
-      for (let j = 0; j < filas.length; j++) {
-        const elemento = filas[j].querySelector("#elemento_" + i);
-        elemento.style.border = "2px solid green";
-      }
-    } else {
-      // Si los colores no coinciden, cambia el borde del div en rojo
-      for (let j = 0; j < filas.length; j++) {
-        const elemento = filas[j].querySelector("#elemento_" + i);
-        elemento.style.border = "2px solid red";
-      }
-    }
-  }}
-  const checkButton = document.querySelector(".check");
-  checkButton.addEventListener("click", function () {
-    compararYActualizarEstilos(selectedColors, arraysFilaHex);
+    console.log(arraysFilaHex[0])
+    return arraysFilaHex
   })
+})
+

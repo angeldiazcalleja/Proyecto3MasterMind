@@ -18,6 +18,8 @@
           <label id="labelName" for="name">Introduce tu nombre </label>
           <input type="text" id="nameInput" name="name" required minlength="4" maxlength="8" size="10" placeholder="Escribe aquí tu nombre"/>
        </div>
+      
+
           </div>
           <h2 id="h2Colors">🔴🟠🟡Elige 4 colores🔵🟢🟣</h2>
           <div class="row justify-content-center colorsPickersContainer">
@@ -35,6 +37,7 @@
                <input id="color_picker_4" type="color" value="#3498DB" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value4"></span>
               </div>
             </div>
+            <div id="mensajeNombreVacio" style= "display:none">Por favor, introduce un nombre</div>
          </div>
          <div class="containerButtons">
             <div class="row">
@@ -47,7 +50,7 @@
 <script src="/js/main.js"></script>
 <script src="/js/buttons.js"></script>
 <script src="/js/information.js"></script>
-<script src="/js/colors.js"></script>
+
 
 
 
