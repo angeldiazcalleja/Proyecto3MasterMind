@@ -1,4 +1,4 @@
-const generarFilasDeDivs = () => {
+const createRows = () => {
   const contenedor = document.getElementById("contenedorGame");
   for (let i = 0; i < 10; i++) {
     const fila = document.createElement("div");
@@ -13,9 +13,9 @@ const generarFilasDeDivs = () => {
     contenedor.appendChild(fila);
   }
 };
-generarFilasDeDivs();
+createRows();
 
-const generarDivColores = () => {
+const createColorsDivs = () => {
   const contenedorColor = document.getElementById("colorDiv");
   for (let i = 0; i < 1; i++) {
     const fila = document.createElement("div");
@@ -29,15 +29,15 @@ const generarDivColores = () => {
     contenedorColor.appendChild(fila);
   }
 };
-generarDivColores();
+createColorsDivs();
 
 //JUEGO
-
-document.addEventListener("DOMContentLoaded", function () {
+//1.Pintar
+document.addEventListener("DOMContentLoaded",() => {
   let filas = document.querySelectorAll(".fila");
   let elementoActivoIndex = 0;
 
-  document.querySelectorAll(".elementoColor").forEach(function (element) {
+  document.querySelectorAll(".elementoColor").forEach((element) => {
     element.addEventListener("click", function () {
       let color = this.style.backgroundColor;
 
@@ -56,9 +56,9 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
+  //2.Borrar
   // Función para borrar el último elemento pintado
-  const borrarUltimoElementoPintado = () => {
+  const deleteLastItem = () => {
     elementoActivoIndex =
       (elementoActivoIndex - 1 + filas.length * 4) % (filas.length * 4);
     let filaIndex = Math.floor(elementoActivoIndex / 4);
@@ -72,14 +72,14 @@ document.addEventListener("DOMContentLoaded", function () {
   // Asigna la función de borrar al botón con ID "delete"
   const deleteButtons = document.querySelectorAll(".delete");
   deleteButtons.forEach(function (button) {
-    button.addEventListener("click", borrarUltimoElementoPintado);
+    button.addEventListener("click", deleteLastItem);
   });
 });
 
-  
-let arraysFilaHex = []   // Array para almacenar los arrays de valores de color en hexadecimal
+//3.Array 10filas-conversión a hex.
+let arraysFilaHex = []  // Array para almacenar los arrays de valores de color en hexadecimal
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
 
   // Escuchar el clic en el botón con la clase "check"
   const checkButton = document.querySelector(".check");
@@ -108,9 +108,14 @@ document.addEventListener("DOMContentLoaded", function () {
       const filaHex = elementos.map((rgb) => rgbToHex(rgb));
       arraysFilaHex.push(filaHex);
     }
-    console.log(arraysFilaHex, "Arrays hexadecimales de las 10 filas");
-    console.log(arraysFilaHex[0])
+    // console.log(arraysFilaHex, "Arrays hexadecimales de las 10 filas");
+    // console.log(arraysFilaHex[0])
+    // sessionStorage.setItem("arrayElegido", JSON.stringify(arraysFilaHex)); 
     return arraysFilaHex
   })
 })
+
+
+
+
 

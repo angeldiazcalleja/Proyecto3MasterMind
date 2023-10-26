@@ -59,4 +59,11 @@ background-repeat: repeat;
 .containerButtonsResponsive{
     margin-top: 10em;
 }
+#mensajeNombreVacio{
+  text-align: center;
+  font-size: 15px;
+  font-family: Codystar;
+  font-weight: bold;
+  margin-top: 1em;
+}
 }

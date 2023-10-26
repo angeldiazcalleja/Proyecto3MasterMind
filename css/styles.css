@@ -18,8 +18,7 @@ body {
   padding-top: 3em;
 }
 
- 
- .container1 {
+.container1 {
   width: 32em;
   height: 32em;
   /* background-image: url("/images/masters.png"); */
@@ -27,7 +26,7 @@ body {
   border-radius: 10%;
   margin-left: auto;
   margin-right: auto;
-} 
+}
 
 .containerButtons {
   display: flex;
@@ -80,7 +79,7 @@ body {
   text-align: justify;
 }
 
-#nombreMostrado{
+#nombreMostrado {
   text-align: center;
   border: 0.1em solid #b2f704;
   border-radius: 0.3em;
@@ -95,7 +94,8 @@ body {
   text-transform: uppercase;
 }
 
-#nombreMostrado:hover, #buttonRulesInformation:hover{
+#nombreMostrado:hover,
+#buttonRulesInformation:hover {
   box-shadow: inset 0 0 0 50px #f704d38f;
 }
 
@@ -142,7 +142,8 @@ body {
   background-color: #01fcd656;
   margin-top: 1.2em;
 }
-#guardarNombre, #buttonRulesInformation{
+#guardarNombre,
+#buttonRulesInformation {
   background-color: #fc01b5bd;
   border: 3px solid #b604f7;
   border-radius: 8px;
@@ -159,12 +160,12 @@ body {
   margin-top: 2em;
 }
 
-#buttonRulesInformation{
-  margin-top:0em;
+#buttonRulesInformation {
+  margin-top: 0em;
 }
 
-#guardarNombre:hover{
-    box-shadow: inset 0 0 0 50px #01fcd8;
+#guardarNombre:hover {
+  box-shadow: inset 0 0 0 50px #01fcd8;
 }
 
 .h1Title {
@@ -174,8 +175,7 @@ body {
 }
 #neons,
 #labelName,
-#mensajeNombreVacio
- {
+#mensajeNombreVacio {
   -webkit-animation: glow 2s ease-in-out infinite alternate;
   -moz-animation: glow 2s ease-in-out infinite alternate;
   animation: glow 2s ease-in-out infinite alternate;
@@ -238,7 +238,10 @@ body {
   padding-left: 4.5em;
 }
 
-#color_picker_1, #color_picker_2,#color_picker_3,#color_picker_4 {
+#color_picker_1,
+#color_picker_2,
+#color_picker_3,
+#color_picker_4 {
   width: 5em;
   height: 3em;
   border-radius: 16px;
@@ -257,7 +260,7 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: 'DotGothic16', sans-serif;
+  font-family: "DotGothic16", sans-serif;
   font-size: 56px;
   color: rgba(255, 255, 255, 1);
   text-decoration: normal;
@@ -280,7 +283,7 @@ body {
     0 0 80px #00ffff, 0 0 100px #00ffff;
 }
 
-.titleVictory{
+.titleVictory {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,14 +291,14 @@ body {
 
 #gameOverId {
   box-sizing: border-box;
-  font-family: 'Pixelify Sans', sans-serif;
+  font-family: "Pixelify Sans", sans-serif;
   color: rgba(201, 15, 211, 0.89);
   font-size: 11vw;
   position: relative;
   margin-left: 0.4em;
   margin-top: 0.15em;
   text-transform: uppercase;
-  -webkit-text-stroke: 0.3vw rgb(201, 15, 211);;
+  -webkit-text-stroke: 0.3vw rgb(201, 15, 211);
 }
 
 #gameOverId::before {
@@ -310,7 +313,7 @@ body {
   border-right: 2px solid #c19bf5;
   -webkit-text-stroke: 0vw #f7f7fe;
   animation: animate 6s linear infinite;
-} 
+}
 
 @keyframes animate {
   0%,
@@ -323,7 +326,7 @@ body {
   90% {
     width: 100%;
   }
-} 
+}
 
 .fila {
   display: flex;
@@ -332,7 +335,6 @@ body {
   margin-left: 15%;
   margin-right: 15%;
   margin-top: 0.4em;
- 
 }
 .elemento {
   width: 40px;
@@ -342,7 +344,7 @@ body {
   margin: 5px;
 }
 
-.borderContainerGame{
+.borderContainerGame {
   border: 0.3em groove #f704d3;
   border-radius: 1em;
   width: 18em;
@@ -352,7 +354,7 @@ body {
   background-color: #01fcd6e6;
   margin-top: 1.4em;
 }
-.container-fluidGame{
+.container-fluidGame {
   width: 100%;
   height: 100%;
   background-image: url("/images/fotoPrincipal5.avif");
@@ -368,7 +370,6 @@ body {
   margin-top: 0em;
   margin-left: 25%;
   margin-right: 25%;
- 
 }
 .elementoColor {
   width: 20px;
@@ -378,26 +379,28 @@ body {
   border-radius: 2px;
 }
 
-.buttonsGame{
+.buttonsGame {
   margin-left: 25%;
   margin-right: 25%;
 }
 
-.check, .delete{
- border-radius: 4px;
- border: 3px solid #b2f704;
- background-color: #f704d3c4;
- font-weight: bold;
- color: white;
- height: 2em;
- width: 5em;
+.check,
+.delete {
+  border-radius: 4px;
+  border: 3px solid #b2f704;
+  background-color: #f704d3c4;
+  font-weight: bold;
+  color: white;
+  height: 2em;
+  width: 5em;
 }
 
-.check:hover, .delete:hover{
+.check:hover,
+.delete:hover {
   box-shadow: inset 0 0 0 50px #f704d38f;
 }
 
-#mensajeNombreVacio{
+#mensajeNombreVacio {
   text-align: center;
   font-size: 20px;
   font-family: Codystar;

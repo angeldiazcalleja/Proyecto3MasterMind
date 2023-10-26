@@ -1,59 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="stylesheet" href="/css/media.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/media.css" />
     <title>🔴🟠🟡Information🟢🔵🟣</title>
-</head>
-<body>
-    
-   <div class="container-fluid">
+  </head>
+  <body>
+    <div class="container-fluid">
       <div class="borderContainer">
-          <!-- REGISTRO -->
-       <div class="borderContainer2">
+        <div class="borderContainer2">
           <div class="borderContainer3">
-       <div class="containerName">
-          <label id="labelName" for="name">Introduce tu nombre </label>
-          <input type="text" id="nameInput" name="name" required minlength="4" maxlength="8" size="10" placeholder="Escribe aquí tu nombre"/>
-       </div>
-      
-
+            <div class="containerName">
+              <label id="labelName" for="name">Introduce tu nombre </label>
+              <input
+                type="text"
+                id="nameInput"
+                name="name"
+                required
+                minlength="4"
+                maxlength="8"
+                size="10"
+                placeholder="Escribe aquí tu nombre"
+                autocomplete="off"
+              />
+            </div>
           </div>
           <h2 id="h2Colors">🔴🟠🟡Elige 4 colores🔵🟢🟣</h2>
           <div class="row justify-content-center colorsPickersContainer">
-              <div class="col-4 columnColor">
-               <input id="color_picker_1" type="color" value="#F4D03F" list="listacoloresperfil onchange="showHex()> 
-               <span id="color_hex_value1"></span>
-              </div>
-              <div class="col-4 columnColor">
-               <input id="color_picker_2" type="color" value="#58D68D" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value2"></span>
-              </div>
-              <div class="col-4 columnColor">
-               <input id="color_picker_3" type="color" value="#C0392B" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value3"></span>
-              </div>
-              <div class="col-4 columnColor">
-               <input id="color_picker_4" type="color" value="#3498DB" list="listacoloresperfil onchange="showHex()> <span id="color_hex_value4"></span>
-              </div>
+            <div class="col-4 columnColor">
+              <input
+                id="color_picker_1"
+                type="color"
+                value="#F4D03F"
+                list="listacoloresperfil onchange="
+                showHex()
+              />
+              <span id="color_hex_value1"></span>
             </div>
-            <div id="mensajeNombreVacio" style= "display:none">Por favor, introduce un nombre</div>
-         </div>
-         <div class="containerButtons">
-            <div class="row">
-            <button id="guardarNombre">PLAY GAME 🎮 </button>
-              </div>
+            <div class="col-4 columnColor">
+              <input
+                id="color_picker_2"
+                type="color"
+                value="#58D68D"
+                list="listacoloresperfil onchange="
+                showHex()
+              />
+              <span id="color_hex_value2"></span>
             </div>
-         </div>
+            <div class="col-4 columnColor">
+              <input
+                id="color_picker_3"
+                type="color"
+                value="#C0392B"
+                list="listacoloresperfil onchange="
+                showHex()
+              />
+              <span id="color_hex_value3"></span>
+            </div>
+            <div class="col-4 columnColor">
+              <input
+                id="color_picker_4"
+                type="color"
+                value="#3498DB"
+                list="listacoloresperfil onchange="
+                showHex()
+              />
+              <span id="color_hex_value4"></span>
+            </div>
+          </div>
+          <div id="mensajeNombreVacio" style="display: none">
+            Por favor, introduce un nombre
+          </div>
+        </div>
+        <div class="containerButtons">
+          <div class="row">
+            <button id="guardarNombre">PLAY GAME 🎮</button>
+          </div>
+        </div>
+      </div>
     </div>
 
-<script src="/js/main.js"></script>
-<script src="/js/buttons.js"></script>
-<script src="/js/information.js"></script>
-
-
-
-
-</body>
+    <script src="/js/buttons.js"></script>
+    <script src="/js/information.js"></script>
+    <script src="/js/main.js"></script>
+  </body>
 </html>
-
