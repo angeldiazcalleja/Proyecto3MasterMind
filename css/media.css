@@ -44,7 +44,7 @@ background-repeat: repeat;
     margin-left: 2.8em;
     margin-top: 2em;
 }
-.containerVictor, .containerFail{
+.containerVictory, .containerFail{
     width: 22em;
 }
 .buttonVictory{
@@ -59,7 +59,7 @@ background-repeat: repeat;
 .containerButtonsResponsive{
     margin-top: 10em;
 }
-#mensajeNombreVacio{
+#emptyName{
   text-align: center;
   font-size: 15px;
   font-family: Codystar;
