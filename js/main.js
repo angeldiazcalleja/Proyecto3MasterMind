@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Escuchar el clic en el botón con la clase "check"
   const checkButton = document.querySelector(".check");
   checkButton.addEventListener("click", () => {
-    arraysFilaHex.length = 0; // Vaciar el array para evitar duplicados
+   arraysFilaHex.length = []; // Vaciar el array para evitar duplicados
     for (let i = 0; i < 10; i++) {
       // Seleccionar la fila cuyo ID es "fila_X" donde X es el número de fila
       const fila = document.getElementById("fila_" + i);

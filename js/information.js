@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 //Comprobación.
-// let arraysFilaHex = JSON.parse(sessionStorage.getItem("arrayElegido"));
+/
 let currentRow = 0; // Seguimiento de la fila en la que estoy
 
 const verificarElementoEnArray = (i, elemento, array, fila) => {
@@ -96,25 +96,27 @@ const compararArrays = (arraysFilaHex, selectedColors) => {
 
 const botonCheck = document.querySelector(".check");
 botonCheck.addEventListener("click", () => {
-  console.log(selectedColors, "Esto es random")
-  // console.log(arraysFilaHex)
-  // console.log(arraysFilaHex[0])
-  let resultado = compararArrays(arraysFilaHex, selectedColors);
-  console.log(resultado, "Comprobación resultado");
+  // Realizar alguna acción antes de llamar a compararArrays (si es necesario)
 
-  // Verificar si todas las respuestas son correctas
-  if (resultado.every((value) => value === 3)) {
-    // El usuario ha ganado, redirigir a la página de victoria
-    window.location.href = "victory.html";
-  } else {
-    // Verificar si el usuario ha alcanzado la fila máxima
-    if (currentRow > 9) {
-      // El usuario ha perdido, redirigir a la página de derrota
-      window.location.href = "fail.html";
+  // Llamar a compararArrays después de un retraso de 1000 milisegundos (1 segundo)
+  setTimeout(function() {
+    let resultado = compararArrays(arraysFilaHex, selectedColors);
+    console.log(resultado, "Comprobación resultado");
+
+    // Verificar si todas las respuestas son correctas
+    if (resultado.every((value) => value === 3)) {
+      // El usuario ha ganado, redirigir a la página de victoria
+      window.location.href = "victory.html";
     } else {
-      // Incrementar la fila actual para pasar a la siguiente fila
+      // Verificar si el usuario ha alcanzado la fila máxima
+      if (currentRow >= 9) {
+        // El usuario ha perdido, redirigir a la página de derrota
+        window.location.href = "fail.html";
+      } else {
+        // Incrementar la fila actual para pasar a la siguiente fila
+      }
+      
+      currentRow++;
     }
-    
-    currentRow++;
-  }
+  }, 500); // Retrasar la llamada a compararArrays por medio segundo
 });
