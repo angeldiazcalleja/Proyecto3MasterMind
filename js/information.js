@@ -57,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //Comprobación.
 // let arraysFilaHex = JSON.parse(sessionStorage.getItem("arrayElegido"));
-
 let currentRow = 0; // Seguimiento de la fila en la que estoy
 
 const verificarElementoEnArray = (i, elemento, array, fila) => {
@@ -81,6 +80,7 @@ const compararArrays = (arraysFilaHex, selectedColors) => {
   );
  
   for (let i = 0; i < selectedColors.length; i++) {
+    console.log(arraysFilaHex, "ERROR")
     const elemento1 = arraysFilaHex[currentRow][i];
     const resultadoElemento = verificarElementoEnArray(
       i,
@@ -96,6 +96,9 @@ const compararArrays = (arraysFilaHex, selectedColors) => {
 
 const botonCheck = document.querySelector(".check");
 botonCheck.addEventListener("click", () => {
+  console.log(selectedColors, "Esto es random")
+  // console.log(arraysFilaHex)
+  // console.log(arraysFilaHex[0])
   let resultado = compararArrays(arraysFilaHex, selectedColors);
   console.log(resultado, "Comprobación resultado");
 
@@ -110,8 +113,8 @@ botonCheck.addEventListener("click", () => {
       window.location.href = "fail.html";
     } else {
       // Incrementar la fila actual para pasar a la siguiente fila
-
-      currentRow++;
     }
+    
+    currentRow++;
   }
 });

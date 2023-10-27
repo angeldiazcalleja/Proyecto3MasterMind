@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded",() => {
   };
   // Asigna la función de borrar al botón con ID "delete"
   const deleteButtons = document.querySelectorAll(".delete");
-  deleteButtons.forEach(function (button) {
+  deleteButtons.forEach( (button) => {
     button.addEventListener("click", deleteLastItem);
   });
 });
@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Escuchar el clic en el botón con la clase "check"
   const checkButton = document.querySelector(".check");
-  checkButton.addEventListener("click", function () {
+  checkButton.addEventListener("click", () => {
     arraysFilaHex.length = 0; // Vaciar el array para evitar duplicados
     for (let i = 0; i < 10; i++) {
       // Seleccionar la fila cuyo ID es "fila_X" donde X es el número de fila
