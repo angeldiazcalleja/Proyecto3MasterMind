@@ -35,7 +35,10 @@ document.addEventListener("DOMContentLoaded", () => {
     selectedColors = JSON.parse(localStorage.getItem("SelectedColors"));
     let originalColors = [...selectedColors];
     console.log(originalColors, "Color elegido por jugador");
-
+    for (let i = 0; i < 4; i++) {
+      document.getElementById("color_" + i).style.backgroundColor =
+        selectedColors[i];
+    }
     // Generar mi array con diferentes posiciones en los colores. Fisher-Yates itera desde la última posición. Intercambio swap.
     const riffleArray = (array) => {
       for (let i = array.length - 1; i > 0; i--) {
@@ -46,31 +49,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
     // Llamando a la función para barajar el array
     const shuffledColors = riffleArray(selectedColors);
-
     // Asignar los colores aleatorios
-    for (let i = 0; i < 4; i++) {
-      document.getElementById("color_" + i).style.backgroundColor =
-        selectedColors[i];
-    }
     console.log(selectedColors, "Array Random");
-    return shuffledColors
+    return shuffledColors;
   }
 });
 
 //Comprobación.
 // let arraysFilaHex = JSON.parse(sessionStorage.getItem("arrayElegido"));
 
-let currentRow = 0; // seguimiento de la fila en la que estoy
+let currentRow = 0; // Seguimiento de la fila en la que estoy
 
-const verificarElementoEnArray = (i, elemento, array) => {
+const verificarElementoEnArray = (i, elemento, array, fila) => {
   if (array[i] === elemento) {
-    document.querySelectorAll(".elemento")[i].style.border = "2px solid green"; //POSICIÓN Y COLOR
+    fila[i].style.border = "3px solid green"; // POSICIÓN Y COLOR
     return 3;
   } else if (array.includes(elemento)) {
-    document.querySelectorAll(".elemento")[i].style.border = "2px solid yellow"; //COLOR PERO NO POSICIÓN
+    fila[i].style.border = "3px solid yellow"; // COLOR PERO NO POSICIÓN
     return 2;
   } else {
-    document.querySelectorAll(".elemento")[i].style.border = "2px solid white"; //NO ESTÁ
+    fila[i].style.border = "3px solid white"; // NO ESTÁ
     return 1;
   }
 };
@@ -78,10 +76,18 @@ const verificarElementoEnArray = (i, elemento, array) => {
 const compararArrays = (arraysFilaHex, selectedColors) => {
   let resultado = [];
 
+  const filaActual = Array.from(
+    document.querySelectorAll(`#fila_${currentRow} .elemento`)
+  );
+ 
   for (let i = 0; i < selectedColors.length; i++) {
     const elemento1 = arraysFilaHex[currentRow][i];
-
-    const resultadoElemento = verificarElementoEnArray(i, elemento1, selectedColors);
+    const resultadoElemento = verificarElementoEnArray(
+      i,
+      elemento1,
+      selectedColors,
+      filaActual
+    );
 
     resultado.push(resultadoElemento);
   }
@@ -94,12 +100,17 @@ botonCheck.addEventListener("click", () => {
   console.log(resultado, "Comprobación resultado");
 
   // Verificar si todas las respuestas son correctas
-  if (resultado.every(value => value === 3)) {
+  if (resultado.every((value) => value === 3)) {
+    // El usuario ha ganado, redirigir a la página de victoria
     window.location.href = "victory.html";
   } else {
-    if (currentRow >= 10) {
+    // Verificar si el usuario ha alcanzado la fila máxima
+    if (currentRow > 9) {
+      // El usuario ha perdido, redirigir a la página de derrota
       window.location.href = "fail.html";
     } else {
+      // Incrementar la fila actual para pasar a la siguiente fila
+
       currentRow++;
     }
   }
