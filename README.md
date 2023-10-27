@@ -17,9 +17,9 @@ En la presentación del proyecto se encuentran dos botones:
 
 -**Play** 🎮, que envía al jugador/a a la pantalla donde tendrá que introducidr su nombre -**OBLIGATORIO**- y elegir 4 colores. En caso de no elegir ninguno de ellos, el jugador o jugadora tendrá los 4 colores por defecto que aparecen al entrar en la página.
 
--**Rules** 🎮, donde se encuentras las reglas principales del juego.
+-**Rules** 🎮, donde se encuentran las reglas principales del juego.
 
-Ambas pantallas terminan enviando al jugador/a a la pantalla principal del proyecto, donde se encuentra el tablero de juego.
+Ambas pantallas terminan enviando al jugador/a a la pantalla principal del proyecto para comenzar el juego.
 
 Para pintar los cuadrados con los colores, se debe ir pulsando cada uno de los 4 colores que aparecen en la parte inferior de la pantalla y automáticamente irán apareciendo de forma ordenada. 
 
@@ -33,9 +33,9 @@ Una vez que la fila -4 colores- está llena, se debe pulsar el botón **CHECK**.
 |Fallo|Borde Blanco|⚪|
 
 
-Existe también el botón **DELETE**, que va borrando los elementos introducidos.
+Existe también el botón **DELETE**, que va borrando los elementos introducidos por si quieren modificarse.
 
-Una vez que el jugador/a ha acertado la combinación elegida por la máquina de forma aleatoria, aparecerá la pantalla de victoria, la cual tiene un efecto de color si pasas el ratón por encima. En caso de agotar las 10 filas posibles sin acertar, el jugador/a será llevado a la pantalla de derrota.
+Una vez que el jugador/a ha acertado la combinación elegida por la máquina de forma aleatoria, aparecerá la pantalla de victoria, la cual tiene un efecto de color si se pasa el ratón por encima. En caso de agotar las 10 filas posibles sin acertar, el jugador/a será llevado a la pantalla de derrota.
 
 
 ### Referencias
